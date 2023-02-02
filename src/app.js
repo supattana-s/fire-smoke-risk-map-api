@@ -4,6 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const error = require("./middleware/error");
 
+// const { sequelize } = require("./models");
+// sequelize.sync({ force: true });
+
 const app = express();
 
 app.use(cors);
