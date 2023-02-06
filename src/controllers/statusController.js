@@ -1,6 +1,16 @@
 const { Op } = require("sequelize");
 const { Status, Checkpoints, DetailsChecklist } = require("../models");
 
+exports.getAllStatus = async (req, res, next) => {
+    try {
+        const allStatus = await Status.findAll();
+
+        res.status(200).json({ allStatus });
+    } catch (err) {
+        next(err);
+    }
+};
+
 exports.getStatusById = async (req, res, next) => {
     try {
         const { checkpointsId } = req.params;
