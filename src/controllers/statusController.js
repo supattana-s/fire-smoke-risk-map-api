@@ -1,7 +1,7 @@
 const { Op } = require("sequelize");
 const { Status, Checkpoints, DetailsChecklist } = require("../models");
 
-exports.getStatus = async (req, res, next) => {
+exports.getStatusById = async (req, res, next) => {
     try {
         const { checkpointsId } = req.params;
 
